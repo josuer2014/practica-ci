@@ -6,7 +6,12 @@ function despedir(nombre) {
     return `Adiós, ${nombre}. Gracias por utilizar la aplicación`;
 }
 
+function mostrarInformacion(nombre) {
+    return "Proyecto desarrollado con Node.js, Git y GitHub";
+}
+
 console.log(saludar("Profe"));
 console.log(despedir("Profe"));
+console.log(mostrarInformacion());
 
-module.exports = { saludar, despedir };
+module.exports = { saludar, despedir, mostrarInformacion };
