@@ -1,0 +1,29 @@
+name: Integracion Continua
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtener codigo
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Verificar version de Node.js
+        run: node --version
+
+      - name: Verificar sintaxis
+        run: node --check app.js
+
+      - name: Ejecutar pruebas
+        run: node test.js
