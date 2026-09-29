@@ -1,5 +1,5 @@
 function saludar(nombre) {
-    return `Hola, ${nombre}. Bienvenido a la práctica de Integración`;
+    return `Hola, ${nombre}. Bienvenido a la práctica de desarrollo de Integración`;
 }
 
 function despedir(nombre) {
